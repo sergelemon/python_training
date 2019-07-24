@@ -89,7 +89,14 @@ else:
 # if 0 <= a < 1000:
 
 #использование тернарных операторов
-
+'''
 x = 5
 a = 4 if x != 5 else x
 print(a)
+'''
+
+#задача на принадлежность точки окружности
+
+msg = ('X:', 'Y:', 'X0:', 'Y0:', 'R:')
+x, y, x0, y0, r = (float(input(msg[i])) for i in range(5))
+print('yes' if (x - x0) ** 2 + (y - y0) ** 2 <= r ** 2 else 'no')
