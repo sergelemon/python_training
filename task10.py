@@ -7,3 +7,5 @@ n = n % (24*60)
 hh = n // 60
 mm = n - hh * 60
 print(hh, ':', mm)
+
+#тест для Git
