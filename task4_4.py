@@ -7,5 +7,5 @@ delta = (A-B)+1
 
 for i in range(delta):
     n = A-i
-    if n%2 != 0:
+    if n%2 != 0:  # так и не понял, как в этой задаче обойтись без if :(
         print(n)
