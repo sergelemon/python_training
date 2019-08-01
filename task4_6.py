@@ -13,14 +13,11 @@ while True:
 # Таблица умножения
 
 print("\nТаблица умножения: \n")
-for n in range(2,10):
-    s = ''
-    for m in range(2, 6):
-        s = s + str(m) + ' x ' + str(n) + ' = ' + str(n*m) + '\t\t'
-    print(s)
-print('')
-for n in range(2,10):
-    s = ''
-    for m in range(6, 10):
-        s = s + str(m) + ' x ' + str(n) + ' = ' + str(n*m) + '\t\t'
-    print(s)
+
+for row in range(2):
+    for n in range(2,10):
+        s = ''
+        for col in range(2 + 4*row, 6 + 4*row):
+            s = s + str(col) + ' x ' + str(n) + ' = ' + str(col*n) + '\t\t'
+        print(s)
+    print('')
