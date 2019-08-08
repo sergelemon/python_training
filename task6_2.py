@@ -16,3 +16,19 @@
 #
 # 		2. Так же, понадобится list comprehension который позволит создать список случайных значений
 #     )
+
+from random import randint
+
+all_children = 10
+lst = [randint(100, 200) for _ in range(all_children)]
+lst.sort(reverse=True)
+print('Дети без Пети', lst)
+
+petya = int(input("Рост Пети: "))
+lst.append(petya)
+lst.sort(reverse=True)
+print('Дети c Петей', lst)
+
+found = [idx for idx, ch in enumerate(lst) if ch == petya]
+print('Петя на', found[-1]+1, 'месте')
+
