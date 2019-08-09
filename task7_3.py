@@ -2,22 +2,14 @@
 # которые подходять по условию задачи.
 # Задачу необходимо решить с использованием словаря.
 
-s = ' антошка  антошка идем копать картошку \nантошка антошка идем копать картошку'
+s = 'антошка  антошка идем копать картошку \nантошка антошка идем копать картошку'
 print(s, '\n')
+sp = s.split()
 
 words = {}
 word = ''
 
-for i in range(len(s)):
-    if s[i] == ' ' or s[i] == '\n':
-        if word != '':
-            if not word in words:
-                words[word] = 0
-            words[word] += 1
-            word = ''
-    else:
-        word += s[i]
-if word != '':
+for word in sp:
     if not word in words:
         words[word] = 0
     words[word] += 1

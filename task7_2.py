@@ -3,23 +3,15 @@
 # Словом считается последовательность непробельных символов идущих подряд, слова разделены одним или большим числом
 # пробелов или символами конца строки.
 
-s = ' антошка  антошка идем копать картошку \nантошка антошка идем копать картошку'
+s = 'антошка  антошка идем копать картошку \nантошка антошка идем копать картошку'
 print(s, '\n')
+sp = s.split()
 
 words = {}
 word = ''
 
-for i in range(len(s)):
-    if s[i] == ' ' or s[i] == '\n':
-        if word != '':
-            if not word in words:
-                words[word] = 0
-            print(word, words[word])
-            words[word] += 1
-            word = ''
-    else:
-        word += s[i]
-if word != '':
+for word in sp:
     if not word in words:
         words[word] = 0
     print(word, words[word])
+    words[word] += 1
