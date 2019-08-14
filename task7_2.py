@@ -11,7 +11,7 @@ words = {}
 word = ''
 
 for word in sp:
-    if not word in words:
+    if word not in words:
         words[word] = 0
     print(word, words[word])
     words[word] += 1

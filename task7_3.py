@@ -10,7 +10,7 @@ words = {}
 word = ''
 
 for word in sp:
-    if not word in words:
+    if word not in words:
         words[word] = 0
     words[word] += 1
 
