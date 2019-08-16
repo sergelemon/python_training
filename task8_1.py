@@ -7,8 +7,6 @@ def sdvig(number, step = 1, direction = False):
         number = number*10 if direction else number // 10
     return number
 
-number = int(input('Введите число: '))
-step = int(input('Введите количество разрядов: '))
-direction = (int(input('Введите направление (1 - вправо, 0 - влево): ')) == 1)
-
-print(sdvig(number, step, direction))
+print(sdvig(123456789))           # 12345678
+print(sdvig(123456789, 2))        # 1234567
+print(sdvig(123456789, 2, True))  # 12345678900
