@@ -4,9 +4,10 @@
 
 def sdvig(number, step = 1, direction = False):
     for i in range(step):
-        number = number*10 if direction else number // 10
+        number = number * 10 if direction else number / 10
     return number
 
-print(sdvig(123456789))           # 12345678
-print(sdvig(123456789, 2))        # 1234567
+print(sdvig(123456789))           # 12345678.9
+print(sdvig(123456789, 2))        # 1234567.8900000001
+# не знаю, следует ли округлять результат до step знаков после запятой?
 print(sdvig(123456789, 2, True))  # 12345678900
