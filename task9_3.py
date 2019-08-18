@@ -9,14 +9,16 @@ moment1, moment2 = 1, 0
 
 while moment1 > moment2:
 
-    hh1 = randint(0, 24)
-    mm1 = randint(0, 60)
-    ss1 = randint(0, 60)
+    hh1 = randint(0, 23)
+    mm1 = randint(0, 59)
+    ss1 = randint(0, 59)
     moment1 = hh1 * 3600 + mm1 * 60 + ss1
 
-    hh2 = randint(0, 24)
-    mm2 = randint(0, 60)
-    ss2 = randint(0, 60)
+    hh2 = randint(0, 23)
+    mm2 = randint(0, 59)
+    ss2 = randint(0, 59)
     moment2 = hh2 * 3600 + mm2 * 60 + ss2
 
-print(hh, mm, ss, )
+print(hh1, mm1, ss1, sep=':')
+print(hh2, mm2, ss2, sep=':')
+print(moment2 - moment1)
