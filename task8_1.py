@@ -3,7 +3,9 @@
 #  сдвига (по умолчанию сдвиг на 1 разряд), 3-й булевский параметр задаёт направление сдвига (по умолчанию влево (False)).
 
 def sdvig(number, step = 1, direction = False):
-    s = step if direction else len(str(number)) - step
+    s = step % len(str(number))
+    if not direction:
+        s = len(str(number)) - s
     return int(str(number % (10 ** s)) + str(number // (10 ** s)))
 
 print(sdvig(123456789))           # 234567891
