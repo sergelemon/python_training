@@ -3,11 +3,9 @@
 #  сдвига (по умолчанию сдвиг на 1 разряд), 3-й булевский параметр задаёт направление сдвига (по умолчанию влево (False)).
 
 def sdvig(number, step = 1, direction = False):
-    for i in range(step):
-        number = number * 10 if direction else number / 10
-    return number
+    s = step if direction else len(str(number)) - step
+    return int(str(number % (10 ** s)) + str(number // (10 ** s)))
 
-print(sdvig(123456789))           # 12345678.9
-print(sdvig(123456789, 2))        # 1234567.8900000001
-# не знаю, следует ли округлять результат до step знаков после запятой?
-print(sdvig(123456789, 2, True))  # 12345678900
+print(sdvig(123456789))           # 234567891
+print(sdvig(123456789, 2))        # 345678912
+print(sdvig(123456789, 2, True))  # 891234567
