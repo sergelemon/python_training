@@ -31,8 +31,6 @@
 #
 #     Выравнивание колонок - желательно!
 
-import string
-
 students = {}
 file = open('grade.txt', encoding='utf-8')
 lst = file.readlines()
